@@ -114,12 +114,18 @@ def drawFaceOnImage(frame, face_locations, face_names):
 
 
 def openFile():
+    global camera_is_open
+    # Stop camera thread if it is running
     camera_is_open = False
     # open file dialog for picture
     filename = tkinter.filedialog.askopenfilename(
         initialdir="/", title="Choose Photo")
+    if not filename:
+        return
     # recognize face
     cvframe = cv2.imread(filename)
+    if cvframe is None:
+        return
     faceRecognitionFromPicture(cvframe)
 
     # get recognized picture
