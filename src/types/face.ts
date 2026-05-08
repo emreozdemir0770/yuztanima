@@ -67,3 +67,15 @@ export interface EyeData {
 }
 
 export type EmotionKey = keyof ExpressionScores
+
+export interface OverlaySettings {
+  showLandmarks: boolean
+  showBox: boolean
+  showSymmetryAxis: boolean
+  showLabel: boolean
+}
+
+export interface TrackedFace extends FaceAnalysisResult {
+  color: string
+  index: number
+}

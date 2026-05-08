@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "face-api.js": "^0.22.2",
+    "@tensorflow-models/coco-ssd": "^2.2.3",
+    "@tensorflow-models/mobilenet": "^2.1.1",
+    "@tensorflow/tfjs": "^4.22.0",
+    "@vladmandic/face-api": "^1.7.15",
+    "idb": "^8.0.3",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
